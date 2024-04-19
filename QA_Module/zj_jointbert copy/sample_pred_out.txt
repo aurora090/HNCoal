@@ -1,0 +1,1 @@
+[{"ent.equip_name": "白铜管"}, {"pro.product_date": "生产日期"}, {"pro.equip_code": "设"}]	<query_entity_property_two> -> [白:B-ent.equip_name] [铜:I-ent.equip_name] [管:I-ent.equip_name] 的 [生:B-pro.product_date] [产:I-pro.product_date] [日:I-pro.product_date] [期:I-pro.product_date] 和 [设:B-pro.equip_code] [备:I-pro.name] [名:I-pro.name] [状:I-pro.status] [态:I-pro.status]

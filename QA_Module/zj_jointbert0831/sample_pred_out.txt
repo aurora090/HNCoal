@@ -1,0 +1,1 @@
+[{"ent.equipName": "EBZ160综掘机"}, {"rel.instSite": "区域"}]	<query_related_entity_one> -> 将 [E:B-ent.equipName] [B:I-ent.equipName] [Z:I-ent.equipName] [1:I-ent.equipName] [6:I-ent.equipName] [0:I-ent.equipName] [综:I-ent.equipName] [掘:I-ent.equipName] [机:I-ent.equipName] 的 [区:B-rel.instSite] [域:I-rel.instSite] 全 部 列 举 出 来

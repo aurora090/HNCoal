@@ -1,0 +1,1 @@
+[{"label.equipCalss": "设备类型"}]	<query_entity_by_label_single> -> [设:B-label.equipCalss] [备:I-label.equipCalss] [类:I-label.equipCalss] [型:I-label.equipCalss] 的 所 有 种 类
