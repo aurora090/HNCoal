@@ -19,7 +19,7 @@ from io import BytesIO
 
 
 
-neo4j_url='bolt://211.82.97.250:7688'
+neo4j_url='bolt://localhost:8888'
 user='neo4j'
 password='neo4j'
 graph=Graph(neo4j_url,auth=(user,password))

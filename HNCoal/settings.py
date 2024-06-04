@@ -27,7 +27,7 @@ SECRET_KEY = 'ogyn=t4^s2+9y7-g-9)a1ukjl&&skpty2^86kxwknzpd)4(clr'
 #True 调试模式 False-正式启动模式/上线模式 
 DEBUG = True
 #DEBUG下默认localhost
-ALLOWED_HOSTS = ["211.82.97.230","localhost",'211.82.97.236','211.82.97.250']
+ALLOWED_HOSTS = ["211.82.97.230","localhost",'211.82.97.236','10.199.194.175']
 
 
 # Application definition
@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'Neo4j',
     'QA_Module',
     'UserManagement',
-    'KnowledgeExtraction'
+    'KnowledgeExtraction',
 ]
 
 MIDDLEWARE = [
@@ -58,6 +58,7 @@ MIDDLEWARE = [
     # 'middleware.mymiddleware.LoginCheckMiddleware',
     
 ]
+
 ROOT_URLCONF = 'HNCoal.urls'
 
 TEMPLATES = [
@@ -138,5 +139,17 @@ STATIC_URL = '/static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # 在 setting.py 末尾添加以下设置
 CORS_ALLOW_CREDENTIALS = True
-CORS_ORIGIN_ALLOW_ALL = True
-
+CORS_ORIGIN_WHITELIST = [
+  'http://10.199.194.175:7681',  # 允许来自该域名的请求
+]
+CORS_ALLOW_ALL_ORIGINS = True
+CORS_ALLOW_METHODS = (
+ 'GET',
+ 'OPTIONS',
+ 'POST',
+)
+CORS_ALLOW_HEADERS = (
+ 'Content-Type',  # 允许Content-Type请求头
+ 'Authorization',
+ 'token'
+)

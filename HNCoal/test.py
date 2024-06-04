@@ -3,7 +3,7 @@ from py2neo import Graph,Node,Relationship,NodeMatcher
 from collections import defaultdict
 user="neo4j"
 key="root"
-graph=Graph("http://211.82.97.250:7606",auth=(user,key))
+graph=Graph("http://localhost:6006",auth=(user,key))
 matcher = NodeMatcher(graph)
 
 

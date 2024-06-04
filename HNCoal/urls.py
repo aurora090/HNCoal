@@ -18,7 +18,7 @@ from django.urls import path,include
 from . import views,data_views
 from UserManagement import urls as userManagement_urls
 from QA_Module import urls as qa_module_urls
-# from KnowledgeExtraction import url as KnowledgeExtraction_urls
+from KnowledgeExtraction import urls as KnowledgeExtraction_urls
 urlpatterns = [
     path('admin/', admin.site.urls),
     # path('map',data_views.queryDeviceNumber),
@@ -37,5 +37,6 @@ urlpatterns = [
     path('queryAllLargeEquipment',views.queryAllLargeEquipment),
     path('entityImport',views.entityImport),
     path('tripleImport',views.tripleImport),
-    path('uploadTXT_WORD_PDF',views.uploadTXT_WORD_PDF)
+    path('uploadTXT_WORD_PDF',views.uploadTXT_WORD_PDF),
+    path('KE/',include(KnowledgeExtraction_urls)),
 ]

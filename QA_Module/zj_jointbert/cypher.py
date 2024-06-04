@@ -18,10 +18,8 @@ user = 'neo4j'
 key = 'root'
 import time
 
-graph=Graph("http://211.82.97.236:7106/browser/",auth=(user, key))
-# user = 'neo4j'
-# key = 'root'
-# graph=Graph("bolt://211.82.97.236:7188",auth=(user, key))
+graph=Graph("http://localhost:6006/browser/",auth=(user, key))
+
 intent_to_cypher = {"UNK":"",
                     "mine_knowledge_Infrastruct":"",
                     "mine_knowledge_driving_mining":"",

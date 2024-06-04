@@ -25,7 +25,7 @@ import os
 
 user = 'neo4j'
 key = 'root'
-graph=Graph("http://211.82.97.250:7606/browser/",auth=(user, key))
+graph=Graph("http://localhost:6006/browser/",auth=(user, key))
 import numpy as np
 import torch
 from torch.utils.data import TensorDataset, DataLoader, SequentialSampler
@@ -50,8 +50,13 @@ def QaFuzzyName(name):
     return result
 
 def qa(request):
+   
     # 获取前端发送的问题
     print("请求：%s"%request)
+
+    # 清空实体链接文件
+    with open('/workspace/HNCoal/QA_Module/zj_jointbert/entity_link/cand_score.txt', "w", encoding="utf-8") as file:   
+        file.write('')
     if request.method=='POST':
         postbody=request.body
         param=json.loads(postbody.decode())
@@ -163,6 +168,7 @@ def qa(request):
                 # print("slot_dict====",slot_dict)
                 content,link_html = queryKG(intent_pred, slot_key, slot_val)
                 print("没有后处理的查库文本",content)
+                print("ent_name:",link_html)
 # 如果拿到的content是错误，查询失败等，做处理。如果抽出来有实体或者关系，拿这个进行模糊查询，在这里引用QaFuzzyName函数
                 # 如果查询到了，根据查询结果设置模板返回答案，如果查询不到，返回抱歉等语句。
         fuzzy_answer=[]
@@ -214,6 +220,7 @@ def qa(request):
             print('lines',lines)
             for i in range(len(lines)):
                 res+=lines[i]
+        link_ner = link_html
         link_html=res+'链接结果：&emsp;<span data-v-094c2d54 class="pj" contenteditable="true">'+link_html+'</span>'
         answer={
             'answer': content
@@ -221,6 +228,7 @@ def qa(request):
             ,'slot_pred_html' :slot_pred_html
             # ,'intent_pred':intent_pred
             ,'link_html':link_html
+            ,'link_ner':link_ner
             }
         #print(answer.answer)
         # 将答案作为JSON数据返回给前端

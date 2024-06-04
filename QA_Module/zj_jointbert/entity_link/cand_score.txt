@@ -1,6 +1,0 @@
- <span style="text-align: center;">0.655&emsp;&emsp;&emsp;GGD配电柜
-<br></span> <span style="text-align: center;">0.655&emsp;&emsp;&emsp;KYN28配电柜
-<br></span> <span style="text-align: center;">0.655&emsp;&emsp;&emsp;GCS配电柜
-<br></span> <span style="text-align: center;">0.655&emsp;&emsp;&emsp;GGD配电柜
-<br></span> <span style="text-align: center;">0.655&emsp;&emsp;&emsp;GYZ3供液站
-<br></span>

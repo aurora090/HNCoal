@@ -5,12 +5,9 @@ import re
 import time
 import socket
 
-# graph=Graph("http://211.82.97.236:7106/browser/",username="neo4j",password="root")
-
-
 user = 'neo4j'
 key = 'root'
-graph=Graph("http://211.82.97.250:7606/browser/",auth=(user, key))
+graph=Graph("http://localhost:6006/browser/",auth=(user, key))
 matcher=NodeMatcher(graph)
 
 

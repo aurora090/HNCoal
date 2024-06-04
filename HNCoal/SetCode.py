@@ -5,7 +5,7 @@ def get_key(d, value):
     for k, v in d.items():
         if value in v:
             return k
-graph=Graph("http://211.82.97.250:7606",username="neo4j",password="neo4j")
+graph=Graph("http://localhost:6006",username="neo4j",password="neo4j")
 matcher = NodeMatcher(graph)
 
 bm = pd.read_excel('编码方案.xlsx',engine='openpyxl')

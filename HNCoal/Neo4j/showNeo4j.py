@@ -5,7 +5,7 @@ from py2neo import NodeMatcher,RelationshipMatcher
 import json
 from JosnData import JsonData
 import time
-neo4j_url='bolt://211.82.97.250:7688'
+neo4j_url='bolt://10.199.194.175:7688'
 user='neo4j'
 password='neo4j'
 graph=Graph(neo4j_url,auth=(user,password))

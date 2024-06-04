@@ -25,13 +25,10 @@ import os
 from django.http import HttpResponse, Http404, FileResponse
 from django.http import JsonResponse
 # from task_two import re_spo
-neo4j_url='bolt://211.82.97.250:7688'
+neo4j_url='bolt://localhost:8888'
 user='neo4j'
 password='neo4j'
 graph=Graph(neo4j_url,auth=(user,password))
-# user = 'neo4j'
-# key = 'root'
-# graph=Graph("bolt://211.82.97.236:7188",auth=(user, key))
 
 company_dic = {'华亭煤业公司':'01','庆阳煤电公司':'05','滇东矿业分公司':'06','陕西矿业分公司':'03','扎赉诺尔煤业公司':'02','北方公司':'04'}
 work_scenarios = {

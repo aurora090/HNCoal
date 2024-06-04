@@ -25,7 +25,7 @@ sys.path.append(script_dir)
 from entity_link.similar_caculate import calculate_similarity
 user = 'neo4j'
 key = 'root'
-graph=Graph("http://211.82.97.250:7106/browser/",auth=(user, key))
+graph=Graph("http://localhost:6006/browser/",auth=(user, key))
 
 intent_to_cypher = {"UNK":"",
                     "mine_knowledge_Infrastruct":"",

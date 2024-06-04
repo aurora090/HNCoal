@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-[{"ent.equipCalss": "华亭煤矿采煤工作面"}, {"rel.contain": "包含的"}, {"ent.equipName": "设备"}]	<query_related_entity_two> -> [华:B-ent.equipCalss] [亭:I-ent.equipCalss] [煤:I-ent.equipCalss] [矿:I-ent.equipCalss] [采:I-ent.equipCalss] [煤:I-ent.equipCalss] [工:I-ent.equipCalss] [作:I-ent.equipCalss] [面:I-ent.equipCalss] [包:B-rel.contain] [含:I-rel.contain] [的:I-rel.contain] [设:B-ent.equipName] [备:I-ent.equipName]
-=======
-[{"label.equipCalss": "设备类型"}]	<query_entity_by_label_single> -> [设:B-label.equipCalss] [备:I-label.equipCalss] [类:I-label.equipCalss] [型:I-label.equipCalss] 的 所 有 种 类
->>>>>>> 902e4a9c38ccd3e9cccbb8a6df27b1377d52918f
+[{"label.subComp": "分"}]	<query_related_entity_one> -> 列 出 所 有 [分:B-label.subComp] [公:I-ent.subComp] [司:I-ent.subComp]

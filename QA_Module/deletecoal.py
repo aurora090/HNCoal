@@ -1,7 +1,7 @@
 import pandas as pd
 from py2neo import Graph,Node,Relationship,NodeMatcher
 from collections import defaultdict
-graph=Graph("http://211.82.97.250:7606",username="neo4j",password="neo4j")
+graph=Graph("http://localhost:6006",username="neo4j",password="neo4j")
 matcher = NodeMatcher(graph)
 # query = """
 # MATCH (n)
